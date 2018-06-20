@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@BlueprintsCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blueprints.main.BlueprintsController">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="-3.0" prefHeight="129.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="fileTab" text="     File      ">
+            <content>
+              <AnchorPane fx:id="filePane" />
+            </content>
+          </Tab>
+          <Tab fx:id="objectsTab" text="   Objects   ">
+            <content>
+              <AnchorPane fx:id="objectsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab fx:id="connectorsTab" text="   Connectors   ">
+              <content>
+                <AnchorPane fx:id="connectorsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

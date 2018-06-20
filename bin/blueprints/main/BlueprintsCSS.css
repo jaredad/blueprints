@@ -1,0 +1,47 @@
+.tab-pane>*.tab-header-area>*.tab-header-background 
+{
+   -fx-background-color: -fx-outer-border, -fx-text-box-border, #07664f;
+   -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
+
+.tab
+{
+	-fx-background-color: #07664f;
+	-fx-pref-height: 30.0;
+	-fx-shape: "M300,290 L300,168 L410,168 L410,290 L300,290 z";
+	-fx-padding: 0 30 0 30;
+	
+}
+
+.tab-label {
+	-fx-text-fill: #ededed;
+	-fx-alignment: CENTER;
+	-fx-border: transparent;
+}
+
+.tab:selected{
+    -fx-background-color: #ededed;
+    -fx-border-color: #ededed;
+} 
+
+#tabPane .tab:selected .tab-label {
+    -fx-text-fill: #07664f;
+    -fx-background: #ededed;
+} 
+
+#connectorsPane {
+	-fx-background-color: #ededed;
+}
+
+#filePane{
+	-fx-background-color: #ededed;
+}
+
+#objectsPane {
+	-fx-background-color: #ededed;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
