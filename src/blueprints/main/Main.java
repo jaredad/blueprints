@@ -1,5 +1,6 @@
 package blueprints.main;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,8 +14,8 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("BlueprintsGUI.fxml"));
-        primaryStage.setTitle("BLUEPRINTS");
+		Parent root = FXMLLoader.load(getClass().getResource("NotesGUI.fxml"));
+        primaryStage.setTitle("Notes Application");
         primaryStage.setScene(new Scene(root, 800, 800));
         primaryStage.show();
 	}
