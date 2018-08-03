@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@BlueprintsCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blueprints.main.BlueprintsController">
+<AnchorPane fx:id="pane" prefHeight="688.0" prefWidth="1258.0" stylesheets="@BlueprintsCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blueprints.main.BlueprintsController">
    <children>
-      <TabPane fx:id="tabPane" layoutY="-3.0" prefHeight="129.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabPane" layoutY="37.0" prefHeight="122.0" prefWidth="1281.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0">
         <tabs>
           <Tab fx:id="fileTab" text="     File      ">
             <content>
-              <AnchorPane fx:id="filePane" />
+              <AnchorPane fx:id="filePane" prefHeight="93.0" prefWidth="1333.0" />
             </content>
           </Tab>
           <Tab fx:id="objectsTab" text="   Objects   ">
             <content>
-              <AnchorPane fx:id="objectsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane fx:id="objectsPane" minHeight="0.0" minWidth="0.0" prefHeight="92.0" prefWidth="1236.0" />
             </content>
           </Tab>
             <Tab fx:id="connectorsTab" text="   Connectors   ">
@@ -26,5 +29,27 @@
             </Tab>
         </tabs>
       </TabPane>
+      <AnchorPane fx:id="headerPane" prefHeight="20.0" prefWidth="1258.0">
+         <children>
+            <Rectangle fx:id="header" fill="#07664f" height="39.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1258.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="exit" layoutX="1218.0" layoutY="2.0" mnemonicParsing="false" onAction="#exit" prefHeight="20.0" prefWidth="42.0" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="restore_and_maximize" layoutX="1188.0" mnemonicParsing="false" onAction="#restoreAndMaximize" prefHeight="20.0" prefWidth="42.0" text="🗗" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="minimize" layoutX="1075.0" layoutY="4.0" mnemonicParsing="false" onAction="#minimize" prefHeight="20.0" prefWidth="42.0" text="–" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="0.0" />
+            <VBox fx:id="textVbox" layoutX="526.0" layoutY="7.0" prefHeight="32.0" prefWidth="100.0">
+               <children>
+                  <Text fx:id="headerText" fill="#ededed" strokeType="OUTSIDE" strokeWidth="0.0" text="filename.blu - Blueprints" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font></Text>
+               </children>
+            </VBox>
+            <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#07664f" height="32.0" layoutX="800.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="257.0" AnchorPane.rightAnchor="140.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="footerPane" layoutX="1173.0" layoutY="664.0" prefHeight="40.0" prefWidth="86.0">
+         <children>
+            <Button fx:id="save" layoutX="43.0" layoutY="1.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="42.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
